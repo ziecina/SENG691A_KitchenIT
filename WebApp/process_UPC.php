@@ -1,13 +1,8 @@
 <?
 require 'aws/aws-autoloader.php';
 
-/*
-use Aws\DynamoDb\DynamoDbClient;
 
-$client = DynamoDbClient::factory(array(
-    'profile' => '<profile in your aws credentials file>',
-    'region'  => '<region name>'
-));*/
+$link = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
 
 
 echo $_REQUEST['UPC'];
