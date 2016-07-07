@@ -6,7 +6,7 @@ $link = new mysqli($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER[
 
 $result = $link->query("SHOW TABLES;");
 
-$row = $results->fetch_object();
+$row = $result->fetch_object();
 print_r($row);
 
 
